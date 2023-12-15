@@ -1,0 +1,47 @@
+<section class="page-header">
+    <div class="overly"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="content text-center">
+                    <h1 class="mb-3">Products</h1>
+                    <p>Hath after appear tree great fruitful green dominion moveth sixth abundantly image that midst of
+                        god day multiply you’ll which</p>
+
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb bg-transparent justify-content-center">
+                            <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Product Single</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <b>Product Details</b>
+            </div>
+            <div class="card-body">
+                <form #empmod="ngForm" (ngSubmit)="updateProduct()">
+                    <label>Product ID</label>
+                    <input type="text" name="pid" [(ngModel)]="prod.id" class="form-control" disabled="disabled" />
+                    <label>Product name</label>
+                    <input type="text" name="pname" [(ngModel)]="prod.productName" class="form-control" />
+                    <label>Product Price</label>
+                    <input type="text" name="price" [(ngModel)]="prod.productPrice" class="form-control" />
+                    <label>Product Descri[tion</label>
+                    <input type="text" name="description" [(ngModel)]="prod.productDescription" class="form-control" />
+                    <br />
+                    <input type="submit" value="Update" class="btn btn-primary" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>

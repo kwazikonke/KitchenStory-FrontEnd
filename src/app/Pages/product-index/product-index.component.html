@@ -1,0 +1,58 @@
+<section class="page-header">
+    <div class="overly"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="content text-center">
+                    <h1 class="mb-3">Products</h1>
+                    <p>Hath after appear tree great fruitful green dominion moveth sixth abundantly image that midst of
+                        god day multiply you’ll which</p>
+
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb bg-transparent justify-content-center">
+                            <li class="breadcrumb-item"><a routerLink="/customer">Home</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <div class="card">
+            <div class="card-header">
+                <b>List of Products</b>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <tr>
+                        <th>Product Number</th>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Product Description</th>
+                        <th>Operations</th>
+                    </tr>
+                    <tr *ngFor="let prod of prodInfo">
+                        <td>{{prod.id}}</td>
+                        <td>{{prod.productName}}</td>
+                        <td>{{prod.productPrice}}</td>
+                        <td>{{prod.productDescription}}</td>
+                        <td>
+                            <input type="button" value="View Products" class="btn btn-info"
+                                (click)="getProductDetail(prod.id)" />
+                            &nbsp;&nbsp;&nbsp;
+                            <input type="button" value="Delete" class="btn btn-info" (click)="deleteProduct(prod.id)" />
+                            &nbsp;&nbsp;&nbsp;
+                            <input type="button" value="Update" class="btn btn-info"
+                                (click)="getUpdateProduct(prod.id)" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+</div>

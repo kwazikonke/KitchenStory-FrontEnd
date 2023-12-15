@@ -1,0 +1,43 @@
+<section class="page-header">
+    <div class="overly"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="content text-center">
+                    <h1 class="mb-3">Products</h1>
+                    <p>Hath after appear tree great fruitful green dominion moveth sixth abundantly image that midst of
+                        god day multiply you’ll which</p>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb bg-transparent justify-content-center">
+                            <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+            Adding Products
+            </div>
+            <div class="card-body">
+                <form #empreg="ngForm" (ngSubmit)="saveProduct()">
+                    <label>Product Name:</label>
+                    <input type="text" name="productname" [(ngModel)]="prod.productName" class="form-control" />
+                    <label>Price:</label>
+                    <input type="text" name="productprice" [(ngModel)]="prod.productPrice" class="form-control" />
+                    <label>Product Description:</label>
+                    <input type="text" name="productdescription" [(ngModel)]="prod.productDescription" class="form-control" />
+                    <br />
+                    <input type="submit" value="Add" class="btn btn-primary" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
